@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style>
+        body{
+            color: blue;
+            background: linear-gradient(to bottom left, violet, lightblue, purple);
+            font-family: system-ui;
+            line-height: 2;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            
+
+           
+        }
+        .wrapper{
+            width: min(900px, 100% -3em);
+            margin-inline: auto;
+                
+        }
+        table{
+            background-color: grey;
+            color: black;
+        }
+        caption,th,td{
+            padding: 1.5rem;
+            color: white;
+        }
+        caption,th{
+            text-align: left;
+        }
+        caption{
+            background: rgba(0, 0, 0, .3);
+            font-size: 2rem;
+            font-weight: 700;text-transform: uppercase;
+            color: aliceblue;
+
+        }
+        th{
+            background-color: hsl(0 0% 0% /.5);}
+
+            tr:nth-of-type(2n){
+                background: hsl(0 0% 0% /.1);
+            }
+            
+            
+            @media(max-width: 650px){
+                th{
+                    display: none;
+                }
+                td{
+                    display: grid;
+                    grid-template-columns: 15ch auto;
+                    padding: .5rem 1rem;
+                }
+                td:first-child{
+                    padding-top: 2rem;
+                }
+                td:last-child{
+                    padding-bottom: 2rem;
+                }
+                td::before{
+                    content:attr(data-cell) ": ";
+                    font-weight: 700;
+                    text-transform: capitalize;
+
+                }
+                
+               
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <h1>Responsive Table</h1>
+            <div class="table-container">
+            <table>
+                <caption>
+                    the world champions
+                </caption>
+
+                <tr>
+                    <th>name</th>
+                    <th>ayaan</th>
+                    <th>khan</th>
+                    <th>wins</th>
+                    <th>cp</th>
+                    <th>championship</th>
+                </tr>
+
+                <tr>
+                    <td data-cell ="name" role="cell">max</td>
+                    <td data-cell="ayaan"role="cell">22</td>
+                    <td data-cell="surname"role="cell">23</td>
+                    <td data-cell="wins"role="cell">34</td>
+                    <td data-cell="cp"role="cell">209.7</td>
+                    <td data-cell="champ"role="cell">2</td>
+                </tr>
+                <tr>
+                    <td data-cell ="name" role="cell">max</td>
+                    <td data-cell="ayaan"role="cell">22</td>
+                    <td data-cell="surname"role="cell">23</td>
+                    <td data-cell="wins"role="cell">34</td>
+                    <td data-cell="cp"role="cell">209.7</td>
+                    <td data-cell="champ"role="cell">2</td>
+               </tr>
+                <tr>
+                    <td data-cell ="name" role="cell">max</td>
+                    <td data-cell="ayaan"role="cell">22</td>
+                    <td data-cell="surname"role="cell">23</td>
+                    <td data-cell="wins"role="cell">34</td>
+                    <td data-cell="cp"role="cell">209.7</td>
+                    <td data-cell="champ"role="cell">2</td>
+            </tr>
+            <tr>
+                <td data-cell ="name" role="cell">max</td>
+                <td data-cell="ayaan"role="cell">22</td>
+                <td data-cell="surname"role="cell">23</td>
+                <td data-cell="wins"role="cell">34</td>
+                <td data-cell="cp"role="cell">209.7</td>
+                <td data-cell="champ"role="cell">2</td>
+        </tr>
+        <tr>
+            <td data-cell ="name" role="cell">max</td>
+                    <td data-cell="ayaan"role="cell">22</td>
+                    <td data-cell="surname"role="cell">23</td>
+                    <td data-cell="wins"role="cell">34</td>
+                    <td data-cell="cp"role="cell">209.7</td>
+                    <td data-cell="champ"role="cell">2</td>
+    </tr>
+    <tr>
+        <td data-cell ="name" role="cell">max</td>
+        <td data-cell="ayaan"role="cell">22</td>
+        <td data-cell="surname"role="cell">23</td>
+        <td data-cell="wins"role="cell">34</td>
+        <td data-cell="cp"role="cell">209.7</td>
+        <td data-cell="champ"role="cell">2</td>
+</tr>
+<tr>
+    <td data-cell ="name" role="cell">max</td>
+    <td data-cell="ayaan"role="cell">22</td>
+    <td data-cell="surname"role="cell">23</td>
+    <td data-cell="wins"role="cell">34</td>
+    <td data-cell="cp"role="cell">209.7</td>
+    <td data-cell="champ"role="cell">2</td>
+</tr>
+<tr>
+    <td data-cell ="name" role="cell">max</td>
+                    <td data-cell="ayaan"role="cell">22</td>
+                    <td data-cell="surname"role="cell">23</td>
+                    <td data-cell="wins"role="cell">34</td>
+                    <td data-cell="cp"role="cell">209.7</td>
+                    <td data-cell="champ"role="cell">2</td>
+</tr>
+<tr>
+    <td data-cell ="name" role="cell">max</td>
+                    <td data-cell="ayaan"role="cell">22</td>
+                    <td data-cell="surname"role="cell">23</td>
+                    <td data-cell="wins"role="cell">34</td>
+                    <td data-cell="cp"role="cell">209.7</td>
+                    <td data-cell="champ"role="cell">2</td>
+</tr>
+                
+               
+            </table>
+        </div>
+        </div>
+    </main>
+    <script>function AddTableARIA() {
+        try {
+          var allTables = document.querySelectorAll('table');
+          for (var i = 0; i < allTables.length; i++) {
+            allTables[i].setAttribute('role','table');
+          }
+          var allCaptions = document.querySelectorAll('caption');
+          for (var i = 0; i < allCaptions.length; i++) {
+            allCaptions[i].setAttribute('role','caption');
+          }
+          var allRowGroups = document.querySelectorAll('thead, tbody, tfoot');
+          for (var i = 0; i < allRowGroups.length; i++) {
+            allRowGroups[i].setAttribute('role','rowgroup');
+          }
+          var allRows = document.querySelectorAll('tr');
+          for (var i = 0; i < allRows.length; i++) {
+            allRows[i].setAttribute('role','row');
+          }
+          var allCells = document.querySelectorAll('td');
+          for (var i = 0; i < allCells.length; i++) {
+            allCells[i].setAttribute('role','cell');
+          }
+          var allHeaders = document.querySelectorAll('th');
+          for (var i = 0; i < allHeaders.length; i++) {
+            allHeaders[i].setAttribute('role','columnheader');
+          }
+          // this accounts for scoped row headers
+          var allRowHeaders = document.querySelectorAll('th[scope=row]');
+          for (var i = 0; i < allRowHeaders.length; i++) {
+            allRowHeaders[i].setAttribute('role','rowheader');
+          }
+        } catch (e) {
+          console.log("AddTableARIA(): " + e);
+        }
+      }
+      
+      AddTableARIA();</script>
+</body>
+</html>

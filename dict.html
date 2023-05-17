@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <style>
+
+        body{
+            margin: 0;
+            background-color: aqua;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .container{
+            background-color: rgba(255, 255, 255, .3);
+            padding: 28px;
+            border-radius: 7px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            font-weight: 200;
+            font-size: 18px;
+         }
+         .heading{
+            font-size: 28px;
+
+         }
+         .input{
+            height: 53px;
+            width: 300px;
+            background-color: rgba(255, 255, 255, .6);
+            border-color: rgba(255, 255, 255, .4);
+            font-size: 16px;
+            padding: 0 42px;
+            border-radius: 5px;
+         }
+         .meaning-container{
+            display: none;
+         }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>English Dictionary</h1>
+        <input placeholder="write word"type="text"class="input"id="input"></input>
+        
+        <p class="info-text"id="info-text">press enter to get the meaning</p>
+        <div class="meaning-container" id="meaning-container">
+         <p> word :-<span class="title"id="title">_____</span> </p>
+         <p> meaning :-<span class="meaning"id="meaning">_____</span> </p>
+         <audio src="" controls id="audio"></audio>
+
+
+    </div>
+    </div>
+    
+    <script src="dict.js"></script>
+</body>
+</html>

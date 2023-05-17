@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+       margin: 0;
+       background: linear-gradient(to left bottom, lightcyan,lightgreen);
+       min-height: 100vh;
+       display: flex;
+       justify-content: center;
+       text-align: center;
+       align-items: center;
+       font-weight: 200;
+
+    }
+    .container{
+        background-color: rgba(255, 255,255, .3);
+        width: 80%;
+        height: 600px;
+        padding: 10px 10px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .6);
+        border-radius: 10px;
+    }
+    h2{
+       
+        font-size: 40px;
+        padding: 50px;
+       
+    }
+    h1{
+        color: blueviolet;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 100;
+        font-size: 50px;
+        padding: 10px 0;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+        letter-spacing: 1px;
+    }
+    .btn{
+        width: 240px;
+        height: 30px;
+        padding: 0 10px;
+        background-color: rgba(255, 255,255, .3);
+        border: none;
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, .5);
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    .btn:hover{
+        background-color: blueviolet;
+        color: white;
+        transform: scale(.96);
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, .9);
+        cursor: pointer;
+        
+    }
+    p{
+        padding: 15px ;
+         font-size: 20px;
+    }
+    
+</style>
+<body>
+    <div class="container" id="container">
+
+        <h1 class="heading">AK Quote Generator</h1>
+        
+        <h2 class="quote">
+            <i class="fa-solid fa-quote-left"></i>
+            <span id="quote">Quote</span>
+            <i class="fa-solid fa-quote-right"></i>
+        </h2>
+        <p class="author" id="author">~ Author</p>
+        <button class="btn" id="btn">Get Me Quote.</button>
+
+    </div>
+    <script src="quote.js"></script>
+</body>
+</html>
